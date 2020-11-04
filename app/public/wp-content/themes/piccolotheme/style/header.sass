@@ -1,0 +1,133 @@
+header
+    padding: 15px
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 9999
+
+    +media($lg)
+        padding: 15px 45px
+
+    .logo 
+        background-color: transparent
+
+        &:before
+            content: ""
+            background: $gold
+            position: absolute
+            width: 80%
+            left: 50%
+            top: -5px
+            transform: translateX(-50%)
+            height: 5px
+
+        img
+            height: 130px
+            margin: 0 auto    
+
+    .menu-wrapper
+        background-color: $dark-blue
+        border-radius: 5px
+        position: relative 
+
+        &:after
+            content: ""
+            background: $gold
+            position: absolute
+            width: 80%
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -5px
+            height: 5px
+
+        .menu
+            position: absolute
+            top: 50%
+            width: 80%
+            left: 50%
+            transform: translate(-50%, -50%)
+            display: flex
+            justify-content: center
+
+            a 
+                color: white
+                opacity: .8
+                font-weight: 700
+                margin-right: 50px
+                text-align: center
+                cursor: pointer
+                font-size: 18px
+
+                &:last-child
+                    margin-right: 0
+
+                &:hover
+                    text-decoration: none
+                    opacity: 1
+                    position: relative 
+
+                    &:after 
+                        content: ""
+                        border: 1px solid $gold
+                        position: absolute
+                        width: 80%
+                        left: 50%
+                        transform: translateX(-50%)
+                        bottom: 5% 
+
+    .mobile-menu-toggle
+        float: right
+        cursor: pointer
+
+        .bar
+            background-color: white
+            width: 20px
+            height: 3px
+
+            &.short
+                margin: 5px 0
+                width: 15px
+
+.mobile
+    .menu
+        position: fixed
+        top: 0
+        right: 0
+        height: 100%
+        display: none
+        overflow: hidden
+        z-index: 99999
+        background: rgba(255, 255, 255, 1)
+        width: 100%
+
+        .close
+            position: relative
+            top: 30px
+            right: 30px
+            width: 20px
+            height: 20px
+            opacity: 1
+
+        ul
+            list-style-type: none
+            margin: 0
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+        .menu-header
+            font-size: 22px
+            line-height: 45px
+            color: black
+            text-align: center
+
+            .d-grid
+                display: grid
+
+            a
+                color: black
+                margin-bottom: 50px
+
+                &:last-child
+                    margin-bottom: 0                                     

@@ -1,0 +1,99 @@
+@import "variables"
+@import "mixins"
+
+@import "header"
+@import "slider-homepage"
+@import "main"
+@import "contact"
+@import "footer"
+
+@font-face
+    font-family: Gotham-Regular
+    src: url("/wp-content/themes/piccolotheme/fonts/gothambook-webfont.ttf")
+
+@font-face
+    font-family: Gotham-Bold
+    src: url("/wp-content/themes/piccolotheme/fonts/gothambold-webfont.ttf")
+
+@font-face
+    font-family: Gotham-Italic
+    src: url("/wp-content/themes/piccolotheme/fonts/Gotham Book Italic.ttf")          
+
+body
+    background-color: white
+    font-family: Gotham-Regular
+
+.gotham-bold
+    font-family: Gotham-Bold
+
+.gotham-italic
+    font-family: Gotham-Italic
+
+.secondary-font
+    font-family: 'Open Sans', sans-serif 
+
+html
+    margin-top: 0px !important
+    
+* html body
+    margin-top: 0px !important  
+
+h1, h2, h3, h4, h5, h6, p, span, ul
+    margin: 0
+
+.big-size-font
+    font-size: 40px
+    +media($lg)
+        font-size: 60px
+
+.large-size-font
+    font-size: 45px    
+
+.medium-size-font
+    font-size: 16px
+
+.desktop
+    display: none
+
+    +media($lg)
+        display: block
+
+.mobile
+    display: block
+
+    +media($lg)
+        display: none
+
+.error404
+    #full-header-slider
+        display: none        
+
+.not-found
+    text-align: center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+
+    img 
+        width: 50%
+        margin: 0 auto
+
+        +media($lg)
+            width: 25%
+
+    h2 
+        font-size: 25px
+        font-weight: 500
+        margin: 25px 0
+
+        +media($lg)
+            font-size: 30px
+
+    a
+        font-size: 16px
+        text-decoration: underline
+        text-transform: uppercase
+        text-align: center
+        color: #000000                

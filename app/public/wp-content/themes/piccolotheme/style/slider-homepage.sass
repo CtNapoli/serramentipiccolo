@@ -1,0 +1,71 @@
+#full-header-slider
+    height: 700px
+    position: relative
+
+    .swiper-container
+        height: 700px
+
+        .swiper-slide
+            +bg()
+
+            &:before
+                content: ""
+                position: absolute
+                left: 0
+                top: 0
+                width: 50%
+                height: 100%
+                z-index: 99
+                display: block
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))
+
+            .text-for-slider 
+                position: relative
+                top: 50%
+                height: 425px
+                z-index: 999
+                text-align: center
+
+                +media($xl)
+                    text-align: left
+
+                h2, h3
+                    color: white
+
+        .custom-next
+            position: absolute
+            right: 5%
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 999
+            cursor: pointer
+
+            &:focus
+                outline: none
+
+            img            
+                display: block
+                height: 30px
+
+        .custom-prev
+            position: absolute
+            left: 5%
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 999
+            cursor: pointer
+
+            &:focus
+                outline: none
+
+            img
+                display: block
+                width: 30px
+
+        .swiper-pagination-bullet
+            background: transparent
+            border: 1px solid white
+            padding: 8px        
+
+        .swiper-pagination-bullet-active
+            background: white       
